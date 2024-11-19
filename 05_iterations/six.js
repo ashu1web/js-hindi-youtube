@@ -10,7 +10,7 @@
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => {
+// const newNums = myNums.filter( (num) => {   //filter ke Andar Callback
 //     return num > 4
 // } )
 
@@ -40,6 +40,6 @@ const books = [
   let userBooks = books.filter( (bk) => bk.genre === 'History')
 
   userBooks = books.filter( (bk) => { 
-    return bk.publish >= 1995 && bk.genre === "History"
+    return bk.publish >= 1995 && bk.genre === "History"  //Now UserBooks will have these values 
 })
   console.log(userBooks);

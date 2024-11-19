@@ -31,7 +31,7 @@ JsUser.greeting = function(){
     console.log("Hello JS user");
 }
 JsUser.greetingTwo = function(){
-    console.log(`Hello JS user, ${this.name}`);
+    console.log(`Hello JS user, ${this.name}`);    //JsUser ki prop ka access
 }
 
 console.log(JsUser.greeting());

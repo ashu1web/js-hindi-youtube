@@ -8,7 +8,7 @@ const user = {
     }
 
 }
-
+//arrow function laways return a promise 
 // user.welcomeMessage()
 // user.username = "sam"    //Context means value in a scope
 // user.welcomeMessage()
