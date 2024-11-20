@@ -29,7 +29,7 @@ promiseThree.then(function(user){
     console.log(user)
 })
 
-const promisFour=new Promise((resolve,reject)=>{
+const promiseFour=new Promise((resolve,reject)=>{
     setTimeout(()=>{
         let error=true
         if(!error){
