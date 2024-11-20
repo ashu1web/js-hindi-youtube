@@ -1,78 +1,58 @@
-const user={
-    name:"A",
-    rollno:10,
-    signedInd:"true",
+const user = {
+  username: "hitesh",
+  loginCount: 8,
+  signedIn: true,
 
-    getUserDetails:function (){
-         //console.log("Got it")
-         //console.log(`Username:${this.name}`)
+  getUserDetails: function(){
+      console.log("Got user details from database");
+      console.log(`Username: ${this.username}`);
+      console.log(this);
+  }
 
-    }
 }
 
-//console.log(user.name)
-//console.log(user.getUserDetails())
+console.log(user.username)
+console.log(user.getUserDetails());
+console.log(this);
 
-                                                                  /* constructor */
-function z(a, b) {
-    this.a = a; // `this.a` becomes a property of the new object
-    this.b = b; // `this.b` becomes a property of the new object
+
+function User(username, loginCount, isLoggedIn){
+  this.username = username;
+  this.loginCount = loginCount;
+  this.isLoggedIn = isLoggedIn
+
+  this.greeting = function(){
+      console.log(`Welcome ${this.username}`);
+
   }
-  
-  const obj = new z(5, 10);
-  console.log(obj.a); // Output: 5
-  console.log(obj.b); // Output: 10
 
-  const obj2=new z(4,8)
-  console.log(obj2.a); // Output: 4
-  console.log(obj2.b); // Output: 8
-  
- /* Why this is Needed Here
-this attaches properties to the object being created.
-Without this, a and b would not be stored on the object. They would only exist temporarily inside the function.
-So this allows the function z to act like a blueprint for creating objects with properties a and b.
+  return this
+}
 
+const userOne = new User("hitesh", 12, true)
+const userTwo = new User("ChaiAurCode", 11, false)
+console.log(userOne.constructor);
+//console.log(userTwo);
 
-*/
-
-                             /*Contructor is also used to not overwrite the properties inside the object or method  ==line 22 to 28 */
-
-
-                             /*new 'keyword' steps by chaicode */
+//this keyword
 /*
-1)As soon as you write new 'Keyword' an empty object is created or instance
-2)Now bcoz of new a constructor is called and its pack the argument
-3)this keyword inject the argument
-4)we get the info  
-*/
+function Toy(name) {
+  this.name = name; // Refers to the new toy object
+}
+const myToy = new Toy("Teddy");
+console.log(myToy.name); // Output: "Teddy"
 
 
+What's happening in your code:
+The Function Parameter (name): When you call new Toy("Teddy"), "Teddy" is passed to the function as an argument. Inside the function, name is just a local variable—it only exists inside the function while it's running.
 
-                                                              /*this/*
-/*
-1)Imagine you have a toy box, and inside this box are different toys like a car and a doll. Now, each toy can do different things: the car can zoom, and the doll can wave. 
-Think of this as a magic word that each toy uses to know who it is and what it can do when it's inside the toy box.
-Here’s how it works:
-Pretend the Car Says "this": When the car says this, it’s actually talking about itself. 
-So, if the car has a function called zoom, it can say something like "this car is zooming!" and know it’s talking about itself.
+The Purpose of this: The goal of the constructor function is to create a new object (like myToy) and attach properties to it. this refers to the specific object being created when you use the new keyword.
 
-const car = {
-  name: "Car",
-  zoom: function() {
-    console.log("This is " + this.name + " zooming!");
-  }
-};
-car.zoom(); // "This is Car zooming!"
+Assigning the Name to the Object:
 
-2)If We Move the Function to the Doll: 
-If we put the same zoom function inside the doll, and the doll says this, it will be talking about the doll instead!
-const doll = {
-  name: "Doll",
-  zoom: car.zoom
-};
-doll.zoom(); // "This is Doll zooming!"
+Without this, the name variable would only exist temporarily inside the function.
+By using this.name, you're saying:
+"Take the value of name and store it as a property of the object being created."
 
-3) Why This Is Useful: Using this helps each toy know who it is, even if it uses the same function. The function can work for both the car and the doll without changing it.
-
-So, this is like the toy saying, "I know who I am!"
+This makes the name available as part of the myToy object, so you can access it later using myToy.name.
 */
