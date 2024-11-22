@@ -11,7 +11,7 @@ promisesOne.then(function(){     //--->Consumption of promise
    // console.log("Promise consumed")  //--->.then ke andar ek function milta h
 })
 
-new Promise((resolve,reject)=>{
+new Promise((resolve,reject)=>{ 
      setTimeout(function(){
        console.log('Async task 2 is completed')
         resolve()
