@@ -18,7 +18,7 @@
 <script>
     const parent = document.querySelector('.parent')
     // console.log(parent);
-    // console.log(parent.children);
+    // console.log(parent.children);   
     // console.log(parent.children[1].innerHTML);
 
     // for (let i = 0; i < parent.children.length; i++) {
@@ -29,7 +29,7 @@
     // console.log(parent.firstElementChild);
     // console.log(parent.lastElementChild);
 
-    const dayOne = document.querySelector('.day')
+    const dayOne = document.querySelector('.day')  //First value-->i.e Monday 
     // console.log(dayOne);
     // console.log(dayOne.parentElement);
     // console.log(dayOne.nextElementSibling);
@@ -37,3 +37,12 @@
     console.log("NODES: ", parent.childNodes);
 </script>
 </html>
+
+<!--1)NodeList: Returned by querySelectorAll(), can be static (not live).
+    2)HTMLCollection: Returned by methods like getElementsByClassName() or
+     getElementsByTagName(), and is live (updates when the document changes).
+     
+****Can apply foreach on queryselall() not on querysel
+querySelector() returns a single element (or null if no match is found).
+querySelectorAll() returns a NodeList, which is a static collection of elements.    
+-->
