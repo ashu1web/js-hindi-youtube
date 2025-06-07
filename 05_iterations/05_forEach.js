@@ -1,6 +1,6 @@
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
-// coding.forEach( function (val){
+// coding.forEach( function (val){  //cb never have any name
 //     console.log(val);
 // } )
 

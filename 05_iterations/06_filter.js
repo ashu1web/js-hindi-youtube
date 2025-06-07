@@ -6,7 +6,7 @@
 //     return item
 // } )
 
-// console.log(values);   ----->forEach cannot return value
+// console.log(values);  values=undefined  ----->forEach cannot return value
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -14,15 +14,15 @@ const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //     return num > 4
 // } )
 
-// const newNums = []
+const newNums = []
 
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums.push(num)
-//     }
-// } )
+myNums.forEach( (num) => {
+    if (num > 4) {
+       newNums.push(num+100)
+   }
+} )
 
-// console.log(newNums);
+console.log(newNums);
 
 
 const books = [
@@ -37,7 +37,7 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-  let userBooks = books.filter( (bk) => bk.genre === 'History')
+  let userBooks = books.filter( (bk) => (bk.genre === 'History'))
 
   userBooks = books.filter( (bk) => { 
     return bk.publish >= 1995 && bk.genre === "History"  //Now UserBooks will have these values 

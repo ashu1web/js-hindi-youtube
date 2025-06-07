@@ -4,6 +4,7 @@ if (true) {
     let a = 10
     const b = 20
     // console.log("INNER: ", a);
+    //var c=100
     
 }
 
@@ -50,6 +51,6 @@ function addone(num){
 
 
 console.log(addTwo(5))               //----->Hoisitng error
-const addTwo = function(num){
+const addTwo = function(num){       //cannot access before fn declaration if we access fn by this method
     return num + 2
 }

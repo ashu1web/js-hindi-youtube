@@ -20,7 +20,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
         <input type="password" name="" id="">
 
-        <ul>
+        <ul class="ul">
             <li class="list-item">one</li>
             <li class="list-item">two</li>
             <li class="list-item">three</li>
@@ -28,4 +28,13 @@
         </ul>
     </div>
 </body>
+<script>
+   
+    
+    const templist=document.querySelectorAll("li")
+    templist.forEach((li)=>{
+              li.style.background="green"
+              li.innerHTML=li.innerHTML+"<h1>Hello</h1>"
+    })
+</script>
 </html>

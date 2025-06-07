@@ -8,32 +8,37 @@ const user = {
     }
 
 }
-//arrow function laways return a promise 
-// user.welcomeMessage()
-// user.username = "sam"    //Context means value in a scope
-// user.welcomeMessage()
+//arrow function always return a promise 
+ user.welcomeMessage()
+ user.username = "sam"    //Context means value in a scope
+ user.welcomeMessage()
 
-// console.log(this);
+ console.log(this);
 
 // function chai(){
 //     let username = "hitesh"
 //     console.log(this.username);
-// }
+//}
 
-// chai()
+//chai()
 
 // const chai = function () {
 //     let username = "hitesh"
 //     console.log(this.username);   --->Can only use inside obj not in fn
 // }
 
+const a=function(){
+     console.log(this)
+}
+a()
+
+
 const chai =() => {
     let username = "hitesh"
-    //console.log(this);
+    console.log("hiiiii")
+    console.log(this)
 }
-
-
-// chai()
+chai()
 
 // const addTwo = (num1, num2) => {
 //     return num1 + num2
@@ -46,7 +51,7 @@ const chai =() => {
 const addTwo = (num1, num2) => ({username: "hitesh"})
 
 
-//console.log(addTwo(3, 4))
+console.log(addTwo(3, 4))
 
 
 // const myArray = [2, 5, 3, 7, 8]

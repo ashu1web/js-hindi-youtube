@@ -14,12 +14,12 @@ console.log(a);
 
 console.log(null > 0);
 console.log(null == 0);
-console.log(null >= 0);
+console.log(null >= 0);  //== and >= work diff >= convert null into 0
 
 console.log(undefined == 0);
 console.log(undefined > 0);
 console.log(undefined < 0);
 
 // === 
-
+console.log("hi")
 console.log("2" === 2);

@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Chai aur code</h1>
+    <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
 <script>
@@ -14,13 +15,18 @@
         console.log("Hitesh");
     }
     const changeText = function(){
+        sayHitesh()
         document.querySelector('h1').innerHTML = "<h1>best JS series</h1>"
     }
+    
+    let timeout
 
-    const changeMe = setTimeout(changeText, 2000)
+    document.querySelector('#start').addEventListener('click',function(){
+         timeout=setTimeout(changeText, 2000)
+    })
 
     document.querySelector('#stop').addEventListener('click', function(){
-        clearTimeout(changeMe) //refernce of setTimeout
+        clearTimeout(timeout) //refernce of setTimeout
         console.log("STOPPED")
     })
 </script>

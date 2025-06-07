@@ -29,14 +29,14 @@
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
+     document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    },false)           //event bubling
 
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clicked");
-    //     e.stopPropagation()
-    // }, false)
+   
+    document.getElementById('owl').addEventListener('click',(e)=>{
+         console.log("owl clicked")
+    },false) 
     
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
@@ -45,15 +45,31 @@
     // }, false)
    
     
-    document.querySelector('#images').addEventListener('click', function(e){
+    /*  document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);
         if (e.target.tagName === 'IMG') {
             console.log(e.target.id);
             let removeIt = e.target.parentNode
             removeIt.remove()
         }   
-    })
+    })  */
     
     //removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>
+
+
+
+<!--
+1. Event Bubbling:
+.)In event bubbling, when an event occurs on a child element, 
+  it first executes on the child and then propagates (bubbles up) to its parent and ancestors.
+.)This means the event handler on the child runs first, then the parent, then the grandparent, and so on.
+
+2. Event Capturing (Trickling):
+.)In event capturing, the event flows from the outermost element (root) to the target element before executing the event handler.
+.)It is the opposite of bubbling, and is less commonly used.
+
+
+To stop these 2  propogation use e.stopPropogation()
+-->

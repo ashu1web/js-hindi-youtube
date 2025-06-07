@@ -8,3 +8,7 @@ const newNums = myNumers
                 .filter( (num) => num >= 40)
 
 console.log(newNums);
+
+
+const newNums2=myNumers.map(num=> num +1)
+console.log(newNums2)
